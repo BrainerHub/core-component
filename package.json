@@ -1,7 +1,32 @@
 {
+  "name": "@brainerhub/core-component",
+  "version": "0.0.5",
+  "type": "module",
+  "description": "A simple template for a custom React component library",
+  "scripts": {
+    "rollup": "rollup -c",
+    "auth-config": "echo registry=https://registry.npmjs.org/>> C:/Users/admin\\.npmrc  && echo @brainerhub:registry=https://npm.pkg.github.com/ >> C:/Users/admin\\.npmrc  && echo //npm.pkg.github.com/:_authToken=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 >> C:/Users/admin\\.npmrc"
+  },
+  "author": "Brainerhub",
+  "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.2.34",
-    "react": "^18.2.0",
-    "typescript": "^5.2.2"
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/react": "^17.0.34",
+    "react": "^17.0.2",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "tslib": "^2.6.2",
+    "typescript": "^4.4.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/brainerhub"
   }
 }
